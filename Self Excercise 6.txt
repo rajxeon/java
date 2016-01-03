@@ -1,0 +1,95 @@
+//Self Excercise 6
+//Author Raj<rajxeon@gmail.com>
+//v 1.0.03
+
+
+/**
+Self_Excercise:
+-----------------------
+ 
+
+6. Write a program to implement the following classes hierarchy to implement the student related details.
+		        Student
+		        ----------
+	    1. StudentMarks     2.StudentCertifications
+
+			****************************
+*********************************************************************************************************************************************************************************
+*/
+
+//package com.example.android.lollypop;
+//
+//*******************************************************************
+// Java compiled on android environment to quickly and safely test code.
+// NOTE: please read the 'More Info' tab to the right for shortcuts.
+//*******************************************************************
+
+//import java.lang.Math; // header stuff MUST go above the first class
+
+
+public class StudentMarks   {
+	public int student_roll;
+  	public String name;
+  	public int science;
+  	public int maths;
+  	public int english;
+  	public int history; 
+  
+  
+  public StudentMarks(int student_roll,int science,int maths,int english,int history,String name){
+  	//Constructor function 
+    this.student_roll	=student_roll;
+    this.science		=science; 
+    this.maths			=maths;	 
+    this.english		=english; 
+    this.history		=history; 
+    this.name			=name; 
+    
+     
+  }
+  
+  
+}
+
+public class StudentCertifications   {
+	
+  public float avg;
+  public char grade;
+  public String name;
+  public int roll;
+  
+  public StudentCertifications(StudentMarks s){
+    this.name=s.name;
+    this.roll=s.student_roll;
+  	this.avg=(s.science+s.maths+s.english+s.history)/4; 
+    if(this.avg>=70){ 	this.grade='A';   }
+    
+    if(this.avg>40 && avg<70){    	this.grade='B';    }
+    
+    else this.grade='C';
+    
+    this.print_result();
+  }
+  
+public void print_result(){
+  	 
+    System.out.println("Name :" + this.name ); 
+    System.out.println("Roll :" + this.roll ); 
+    System.out.println("Grade:" + this.grade ); 
+    System.out.println("Avg  :" + this.avg );
+  }
+  
+}
+
+public class main{
+
+   public static void main(String args[])
+   {	
+     	
+     	StudentMarks sm1 = new StudentMarks(24,98,100,75,87,"Raj" ); 
+     	StudentCertifications SC= new StudentCertifications(sm1);
+     	
+   }
+}
+
+

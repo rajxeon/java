@@ -1,0 +1,73 @@
+//Senerio ex.txt
+//Author Raj<rajxeon@gmail.com>
+//v 1.0.0
+
+
+
+//****************************************************************************************************************************************************************************************
+//Scenario Based Excercise:
+//--------------------------------------
+//1. Create a class called Employee whose objects are records for an employee.  
+// - This class will be a derived class of the class Person.
+// - An employee record has an employee's name, id and age, (inherited from the class Person), an annual salary represented 
+//	as a single value of type double, a year the employee started work as a single value of type int and a national insurance number, which is a value of type String.
+//
+//- Your class should have a reasonable number of constructors and   accessor/service methods:
+//- Write another class containing a main method to fully test your class definition. 
+//****************************************************************************************************************************************************************************************
+
+//package com.example.android.lollypop;
+//
+//*******************************************************************
+// Java compiled on android environment to quickly and safely test code.
+// NOTE: please read the 'More Info' tab to the right for shortcuts.
+//*******************************************************************
+
+//import java.lang.Math; // header stuff MUST go above the first class
+
+
+public class Person   {
+	
+   public int id;
+   public int age;
+   public String name;
+  
+}
+
+public class Employee extends Person {
+	public double anual_salary;
+  	public int year;
+  	public String nia;//National insurance number
+  
+  public Employee(int id,int age,String name,double anual_salary,int year,String nia){
+    this.id=id;
+    this.age=age;
+    this.name=name;
+    this.anual_salary=anual_salary;
+    this.year=year;
+    this.nia=nia;
+  }
+  
+  public void display_data(){
+  	System.out.println("ID  :"+this.id);
+    System.out.println("Age :"+this.age);
+    System.out.println("Name:"+this.name);
+    System.out.println("Sal :"+this.anual_salary);
+    System.out.println("Year:"+this.year);
+    System.out.println("NIA :"+this.nia);
+  }
+  
+}
+
+public class main{
+
+   public static void main(String args[])
+   {	
+     	
+     	Employee emp1 = new Employee(2123,23,"Raj",307000,2015,"56AST237"  );
+     	Employee emp2 = new Employee(2323,23,"Sekhar",357000,2012,"4ASG6272"  );
+     	
+     	emp1.display_data();
+     	emp2.display_data();
+   }
+}

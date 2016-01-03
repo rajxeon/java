@@ -1,0 +1,74 @@
+//Self Excercise 3
+//Author Raj<rajxeon@gmail.com>
+//v 1.0.0
+
+
+/**
+Self Excercise:
+--------------------
+ 
+
+3.Write a java class "Rectangle" with appropriate instance variables and methods.Also include a method which decides whether the rectangle is a 
+   square or not.(Area and perimeter of rectangle)
+ 
+
+			**********************
+*********************************************************************************************************************************************************************************
+*/
+
+//package com.example.android.lollypop;
+//
+//*******************************************************************
+// Java compiled on android environment to quickly and safely test code.
+// NOTE: please read the 'More Info' tab to the right for shortcuts.
+//*******************************************************************
+
+//import java.lang.Math; // header stuff MUST go above the first class
+
+
+public class Rectangle   {
+	
+  	public int length;
+    public int breadth;
+  	
+  	private String type;
+    private double area;
+  	private double perimeter;
+  
+ 	public Rectangle(int length,int breadth){
+  	//Constructor function
+    	this.length=length;
+      	this.breadth=breadth;
+     
+      if(this.length==this.breadth){
+    	this.type="Cube";
+    	}
+      else {
+    	this.type="Rectangle";
+    	}
+    
+    	System.out.println("Area of "+this.type+" is  :"+(length*breadth));
+      	System.out.println("Perimeter of "+this.type+" is  :"+(2*(length+breadth)) );
+  }
+  
+  public void isCube(){
+  	
+    System.out.println("This is a "+this.type);
+    
+  }
+}
+ 
+
+public class main{
+
+   public static void main(String args[])
+   {	
+     	 
+     	Rectangle rec1 = new Rectangle(2,3 ); 
+     	rec1.isCube();
+     	Rectangle rec2 = new Rectangle(3,3 ); 
+     	rec2.isCube();
+     	
+   }
+}
+

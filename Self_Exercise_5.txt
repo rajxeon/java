@@ -1,0 +1,86 @@
+//Self Excercise 5
+//Author Raj<rajxeon@gmail.com>
+//v 1.0.03
+
+
+/**
+Self_Excercise:
+-----------------------
+5. Write a program to implement the following classes hierarchy and find area.
+		        Shape
+		        --------
+	    1. Circle     2.Square      3.Triangle
+
+ 
+
+			****************************
+*********************************************************************************************************************************************************************************
+*/
+
+//package com.example.android.lollypop;
+//
+//*******************************************************************
+// Java compiled on android environment to quickly and safely test code.
+// NOTE: please read the 'More Info' tab to the right for shortcuts.
+//*******************************************************************
+
+//import java.lang.Math; // header stuff MUST go above the first class
+
+
+public class Shape {
+  
+	
+  	public int length;
+  	public int height;
+  	public int alt; 
+  	public double area;
+  	public String type;
+  	
+  
+ 
+  
+  public void Circle(int radius){
+    this.type="Circle";
+    this.area= radius*radius*3.14; 
+  }
+  
+  public void Square(int length){
+    this.type="Square";
+    this.area= length*length; 
+  }
+  
+  public void Triangle(int alt,int base){
+    this.type="Triangle";
+    this.area= ((alt*base)/2); 
+  }
+  
+  
+  public void print_result(){
+    System.out.println("Area of "+this.type+" "+this.area);
+  }
+  
+  
+  
+  
+}
+ 
+public class main{
+
+   public static void main(String args[])
+   {	
+     	
+     	Shape shape1 = new Shape(); 
+     	shape1.Circle(4); 
+      	shape1.print_result();
+     
+		shape1.Square(4); 
+        shape1.print_result();
+     
+     	shape1.Triangle(4,6); 
+     	shape1.print_result();
+     	
+     	
+   }
+}
+
+
